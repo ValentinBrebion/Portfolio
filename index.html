@@ -46,9 +46,10 @@
                 </div>
                 <div class="modal-body">
                     <p> Projet scolaire de la première STI2D. Mon premier site internet basé sur le thème du père Noêl qui est non-responsive réalisé en pure code HTML et CSS.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, velit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, velit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, velit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, velit.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, velit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, velit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, velit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, velit.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, velit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, velit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, velit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, velit.</p>
+                    <p>Réalisé avec l'IDE sublim Text dans un temps de 1 mois et demi, j'ai recu la note de 20/20</p>
+                    <h2>Aperçu :</h2>
+                     <img src="https://media.discordapp.net/attachments/973896772336369675/983641521200963654/site_internet.JPG?width=875&height=409" style="width: 470px; height:250px;">
+
                 </div>
                 <div class="modal-footer">
                  
@@ -60,15 +61,40 @@
 
 <!--##################################################Dashboard ADSLOGIQUE ############################################################################################-->
 <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Projet Dashboard Cryptomonaie - stage BTS SIO</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-       Un projet de fin de première année BTS SIO. Mon maitre de stage a un logiciel du nom de TradingView qui permet de voir les opportunités mondiaux, il l'utilise pour la cryptomonnaie. En parallèle de ça, il a connecté un trading Bot (Robot de trade) qui permet d'acheter ou de vendre lorsque tradingView lui en donne l'ordre à l'aide de signaux.
+       <p>Un projet de fin de première année BTS SIO. Mon maitre de stage a un logiciel du nom de TradingView qui permet de voir les opportunités mondiaux, il l'utilise pour la cryptomonnaie. En parallèle de ça, il a connecté un trading Bot (Robot de trade) qui permet d'acheter ou de vendre lorsque tradingView lui en donne l'ordre à l'aide de signaux.</p>
+       <img src="https://media.discordapp.net/attachments/973896772336369675/983640906563485696/b6c5a7383d0e482190d1d90688671d17.png?width=735&height=409" style="width: 440px; height:250px;"><br>
+
+       <h2 class="font-weight-bold text-decoration-underline">II- Développement</h2>
+       <p>la première étape à faire était de réaliser la connexion à la base de donnée. Pour cela, j'ai utilisé Mysqli. Le code affiché ci-dessous affiche le prénom et le nom de celui qui se connecte.</p>
+
+       <img src="https://media.discordapp.net/attachments/973896772336369675/983643369710420008/PDO.jpg" style="width: 440px; height:250px;">
+       <hr>
+
+       <p>Pour la partie date, j'ai utilisé un input type text car un script javascript permet d'afficher un calendrier en cliquant dessus. Ensuite je récupère les valeurs enregistré pour les mettres dans ma variable SQL. les empty permettent de savoir si la zone d'entrée n'est pas vide.</p>
+       <img src="https://media.discordapp.net/attachments/973896772336369675/983644101062848553/dedatepredate.jpg" style="width: 440px; height:190px;">
+
+       <p>La photo ci-dessous montre la requète qui est mise dans un while. ça permet de parcourir toutes les colonnes de ma BDD. Ensuite, j'ai du faire en sorte qu'il fasse le calcul de pourcentage après le sell et l'afficher ensuite en tenant compte du positif et du négatif. j'ai fais 2 codes pour afficher le calcul, un sans les dates et un avec les dates.</p>
+       <img src="https://media.discordapp.net/attachments/973896772336369675/983645194937311252/grand.jpg" style="width: 440px; height:250px;"><br>
+       <p>Pour envoyer la paire en URL, il a fallu mettre le fichier ou je veux envoyer la paire puis mettre un "?" suivi du code de la paire.</p>
+       <img src="https://media.discordapp.net/attachments/973896772336369675/983645462621978635/envoiepaire.jpg" style="width: 440px; height:30px;">
+       <br>
+       <p>Le code affiché ensuite montre le dropdown des paires. tout d'abord, j'ai fais un tableau qui se remplit automatiquement des paires, une fois fais je parcours mon tableau à l'aide d'un foreach, ensuite en PHP je mets en place le système de date avec un isset qui vérifie la présence de date ou non afin qu'il m'envoie en URL ces données.</p>
+       <img src="https://media.discordapp.net/attachments/973896772336369675/983646145878298724/droppaire.jpg" style="width: 440px; height: 40px;">
+       <p>La première partie graphique, tout d'abord je récupère la variable envoyé qui est le nom de la paire par un GET, ensuite je vérifie si les deux dates sont remplies, si oui je les inclus dans ma requète SQL sinon non. les requètes SQL tiennent compte aussi l'idUser de celui qui se connecte.</p>
+
+       <img src="https://media.discordapp.net/attachments/973896772336369675/983646681641914408/getpairegraphique.jpg" style="width: 440px; height:200px;"><br>
+       <p>Seconde partie graphique, j'ai recupéré un exemple à partir du site CHART JS et je l'ai exploité. Pour afficher les buy et sell je fais un while de ma requête ->fetch_assoc() etje récupère la colonne qui m'intéresse grâce à la variable qui stocke toutes les colonnes. Ensuite pour afficher les dates je fais la même étape sauf que pour la rendre directement plus compréhensible je l'ai mis en format Européen grâce à la commande "date("d-m-Y,strtotime($date));" qui permet de changer le format de date.</p>
+       <h2 class="font-weight-bold text-decoration-underline">III- Conclusion</h2>
+       <p class="font-weight-bold">Pour conclure ce projet, l'expérience en entreprise m'a permis de réaliser plein de chose notamment au niveau de l'organisation (mon code, gestion du projet), mais aussi l'importance de la sécurité des données et comment le mettre en place efficacement. Je remercie mon maitre de stage ainsi que son employé de m'avoir pris comme stagiaire et de m'avoir appris plein de connaissances.</p>
       </div>
+
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
         
@@ -78,14 +104,41 @@
 </div>
 <!--################################################## Projet Altitude ############################################################################################-->
 <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Modification de drône - Projet STI2D</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-       Un projet scolaire réalisé dans le lycée Jean Delattre de Tassigny à la Roche Sur Yon en 1ère STI2D. Un projet pour 4 personnes, 1 pour la consommation ( mesure du niveau de la batterie), 1 pour l'application, 1 pour la mesure du produit et 1 pour la mesure de l'altitude. J'étais en charge de la partie Altitude, la première partie à faire était de définir quel capteur j'allais choisir pour remplir ma partie.
+       <p>Un projet scolaire réalisé dans le lycée Jean Delattre de Tassigny à la Roche Sur Yon en 1ère STI2D. Un projet pour 4 personnes, 1 pour la consommation ( mesure du niveau de la batterie), 1 pour l'application, 1 pour la mesure du produit et 1 pour la mesure de l'altitude. J'étais en charge de la partie Altitude, la première partie à faire était de définir quel capteur j'allais choisir pour remplir ma partie.</p>
+       <img src="https://media.discordapp.net/attachments/973896772336369675/983649065738854450/listecapteur.jpg?width=331&height=409">
+       <p>Pour déterminer quel capteur choisir, je devais faire une liste de 3 capteurs minimum et présenter leurs caractéristiques. Au final, j'ai pris le capteur à ultrason.</p>
+       <h2 class="font-weight-bold text-decoration-underline">II- Développement</h2>
+       <img src="https://media.discordapp.net/attachments/973896772336369675/983649475161640991/declarationvariable.jpg" style=" height:300px;">
+       <p>La première chose à faire était d'importer les bibliothèques disponible dans le logiciel Arduino.<br><br></p>
+
+<h4 class="font-weight-bold">->NRFLite</h4><p>:est la bibliothèque téléchargeable dans le logiciel Arduino qui permet d'envoyer des paquets de données de taille dynamique.</p><br>
+<h4 class="font-weight-bold">->SPI</h4> : La communication SPI (Serial Peripheral Interface, ou interface série pour périphériques) est semblable à la communication I2C.</p>
+<hr>
+<p>Ensuite, je créer des fonctions qui me permettront de réaliser ce que je souhaite faire.</p>
+
+<h4 class="font-weight-bold">Const static Déclaration</h4><p> du type de variable que l'on veut mettre dans le programme.</p>
+<h4 class="font-weight-bold">Struct RadioPacket</h4><p> Déclaration des paquets à envoyer.</p>
+<hr>
+<img src="https://media.discordapp.net/attachments/973896772336369675/983651142204526592/voidsetup.jpg" style=" height:180px;">
+<p>Pour continuer, viens la partie construction du void setup ou on définit le moteur, la led et le buzzer.</p>
+
+<h4 class="font-weight-bold">pinMode</h4><p> : Cette fonction a pour but de définir le type de l'objet utilisé. OUTPUT : configuration en sortie (celui qui va recevoir un ordre)</p>
+<h4 class="font-weight-bold">radio.init</h4><p> Déclaration de la communication radio.<br>
+for i=0; i<5;i++On créer une boucle qui va ajouter les valeurs données par le capteur au fur et à mesure.</p>
+  <img src="https://media.discordapp.net/attachments/973896772336369675/983652615650938890/fordefinitionimpulsion.jpg" style=" width:450px;">
+  <p><h4 class="font-weight-bold">digitalWrite</h4><p> Cette fonction a pour but de mettre en marche le capteur grâce à l'attribut "LOW" ou "HIGH".</p>
+<h4 class="font-weight-bold">delayMicrosecond</h4><p> attend un delay de x microsecond.</p>
+<img src="https://media.discordapp.net/attachments/973896772336369675/983653534132232242/2-3menvoiealtitude.jpg" style=" width:450px;">
+<h4 class="font-weight-bold">les conditions if AltMoy < 2 m 45</h4><p> Pour éviter que le drone ne s'écrase, j'ai mis en place une série de condition sur la hauteur du drône pour éviter que le drône ne se crash et n'abime les plantations.</p>
+ <h2 class="font-weight-bold text-decoration-underline">III- Conclusion</h2>
+ <p class="font-weight-bold">Pour conclure ce projet, j'ai appris à mettre en place une série de test, à partager mes avancés à travers de comptes-rendus réalisés tous les mois (3mois). J'ai aussi appris à choisir un capteur en prenant en compte leurs caractéristiques.</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
@@ -132,14 +185,50 @@
 </div>
 <!--############################################### Projet Gestionnaire de mot pour jeu pendu #############################################################################-->
 <div class="modal fade" id="exampleModal6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Gestionnaire de mot - jeu Python</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-    Projet scolaire basé sur le jeu du Pendu sur du Pyhon. Le but est de réalisé un programme qui en fonction de la difficulté séléctionnée par le joueur, les mots seront plus ou moins dur à trouver.
+    
+    <p>Un projet scolaire réalisé dans le lycée Chevrollier à Angers. Le but était de programmer un gestionnaire de mot en python pour un jeu de pendu. Nous avions 6 semaines pour le terminer mais avec un camarade, nous nous sommes répartis la charge de travail. Pour le mettre en oeuvre, je me suis aidé d'un plugin du nom de Tkinter téléchargeable dans la bibliothèque de PyCharm.</p>
+    <h4>Après de nombreuses recherches, j'ai trouvé un moyen d'ajouter, de supprimer ou de modifier un mot. Grâce à une vidéo du nom de <a href="https://www.youtube.com/watch?v=Ea1LjAyqBs4&feature=youtu.be">how to add and delete items from listbox"</a> que j'ai trouvé sur youtube j'ai pu le faire.</h4>
+
+    <h2 class="font-weight-bold text-decoration-underline">II- Développement</h2>
+    <img src="https://media.discordapp.net/attachments/973896772336369675/983655138461888572/importationbiblio.jpg">
+
+    <p>La première chose à faire était d'importer les bibliothèques disponible dans PyCharm. Une fois importer je pouvais customiser mon interface.</p>
+
+<h4 class="font-weight-bold">Tkinter</h4><p>  Tkinter est la bibliothèque graphique libre d'origine pour le langage Python, permettant la création d'interfaces graphiques</p>
+<h4 class="font-weight-bold">XML.dom</h4><p>  Le Document Object Model, ou "DOM," est une API inter-langage du World Wide Web Consortium (W3C) pour accéder et modifier les documents XML.</p>
+<hr>
+<img src="https://media.discordapp.net/attachments/973896772336369675/983655600107945994/fonctions.jpg?width=403&height=367">
+<p>Ensuite, je créer des fonctions qui me permettront de réaliser ce que je souhaite faire.</p>
+
+<h4 class="font-weight-bold">def enregistrer</h4><p> Cette fonction a pour but d'enregistrer la liste de mot après une modification, un ajout ou une suppression.</p>
+<h4 class="font-weight-bold">def supprimerunelement</h4><p> Comme son nom l'indique, cette fonction permet de supprimer un mot après séléction dans la listbox.</p>
+<h4 class="font-weight-bold">def supprimerliste</h4><p> Comme son nom l'indique, cette fonction permet de supprimer la liste entière.</p>
+<h4 class="font-weight-bold">def insérermot</h4><p> Comme son nom l'indique, cette fonction permet d'ajouter un mot dans la listbox.</p>
+<hr>
+<img src="https://media.discordapp.net/attachments/973896772336369675/983656091260968980/ecrire.jpg?width=450&height=367" >
+<p>Pour continuer, viens la phase de personnalisation de la fenêtre graphique.</p>
+
+<h4 class="font-weight-bold">window = tk()</h4><p> Cette fonction a pour but de créer la première fenêtre, j'ai pu la personnalisé en mettant un titre, une icone ect..</p>
+<h4 class="font-weight-bold">bouton ajouter</h4><p> On créer un bouton ajouter dans la fenêtre window et on lui ajoute des paramètres de placement.</p>
+<h4 class="font-weight-bold">bouton remove</h4><p> On créer un bouton supprimer dans la fenêtre window et on lui ajoute des paramètres de placement.</p>
+<h4 class="font-weight-bold">def insérermot</h4><p> Comme son nom l'indique, cette fonction permet d'ajouter un mot dans la listbox.</p>
+<hr>
+<img src="https://media.discordapp.net/attachments/973896772336369675/983656880343777320/fin.jpg" style=" width:450px;">
+<p>Pour finir, les derniers éléments à mettre en oeuvre.</p>
+
+<h4 class="font-weight-bold">bouton selection</h4><p> Cette fonction a pour but de selectionner un élément pour le supprimer.</p>
+<h4 class="font-weight-bold" >bouton enregistrer</h4><p> l'enregistrement se fait dans le même fichier XML.</p>
+<h4 class="font-weight-bold">Listbox Configuration</h4><p> et mise en place de la listbox dans la fenêtre Tkinter.</p>
+
+<h2 class="font-weight-bold text-decoration-underline">III- Conclusion</h2>
+       <p class="font-weight-bold">Pour conclure ce projet, je dirais qu'il m'a fait apprendre un autre langage de programmation très puissant que je soupconnais. Grâce à ce projet, j'ai pu réaliser d'autres mini-projets utile.</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
@@ -206,7 +295,7 @@
           
           <a class="btn btn-danger smooth-scroll mr-2" href="#contact" data-aos="zoom-in" data-aos-anchor="data-aos-anchor">Contact moi</a>
           <a class="btn btn-danger" href="CVValentinBrebion.pdf" data-aos="zoom-in" data-aos-anchor="data-aos-anchor">Mon CV</a>
-          <p class="fs-5 text-white fst-italic">dernière mise à jour du Portfolio: 03/06/22</p>
+          <p class="fs-5 text-white fst-italic">dernière mise à jour du Portfolio: 07/06/22</p>
 
         </div>
       </div>
