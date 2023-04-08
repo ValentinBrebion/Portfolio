@@ -128,31 +128,35 @@
                   </div><br>
                   <h2>Explication :</h2><br>
        <p>Un projet de fin de première année BTS SIO. Mon maitre de stage a un logiciel du nom de TradingView qui permet de voir les opportunités mondiaux, il l'utilise pour la cryptomonnaie. En parallèle de ça, il a connecté un trading Bot (Robot de trade) qui permet d'acheter ou de vendre lorsque tradingView lui en donne l'ordre à l'aide de signaux.</p>
-       <img src="https://media.discordapp.net/attachments/1092938363222376540/1092943939629219900/tradingview.png?width=1100&height=583" style="width: 440px; height:250px;"><br>
+       <img src="https://media.discordapp.net/attachments/1092938363222376540/1092943939629219900/tradingview.png" style="width: 440px; height:250px;"><br>
 
        <h2 class="font-weight-bold text-decoration-underline">II- Développement</h2>
        <p>la première étape à faire était de réaliser la connexion à la base de donnée. Pour cela, j'ai utilisé Mysqli. Le code affiché ci-dessous affiche le prénom et le nom de celui qui se connecte.</p>
 
-       <img src="https://media.discordapp.net/attachments/973896772336369675/983643369710420008/PDO.jpg" style="width: 440px; height:250px;">
+       <img src="https://media.discordapp.net/attachments/1092938363222376540/1094304833172938852/PDO.jpg" style="width: 440px; height:250px;">
        <hr>
 
        <p>Pour la partie date, j'ai utilisé un input type text car un script javascript permet d'afficher un calendrier en cliquant dessus. Ensuite je récupère les valeurs enregistré pour les mettres dans ma variable SQL. les empty permettent de savoir si la zone d'entrée n'est pas vide.</p>
-       <img src="https://media.discordapp.net/attachments/973896772336369675/983644101062848553/dedatepredate.jpg" style="width: 440px; height:190px;">
+       <img src="https://media.discordapp.net/attachments/1092938363222376540/1094304993034641490/dedatepredate.jpg" style="width: 440px; height:190px;">
 
        <p>La photo ci-dessous montre la requète qui est mise dans un while. ça permet de parcourir toutes les colonnes de ma BDD. Ensuite, j'ai du faire en sorte qu'il fasse le calcul de pourcentage après le sell et l'afficher ensuite en tenant compte du positif et du négatif. j'ai fais 2 codes pour afficher le calcul, un sans les dates et un avec les dates.</p>
-       <img src="https://media.discordapp.net/attachments/973896772336369675/983645194937311252/grand.jpg" style="width: 440px; height:250px;"><br>
+       <img src="https://media.discordapp.net/attachments/1092938363222376540/1094305143991828611/grand.jpg" style="width: 440px; height:250px;"><br>
        <p>Pour envoyer la paire en URL, il a fallu mettre le fichier ou je veux envoyer la paire puis mettre un "?" suivi du code de la paire.</p>
-       <img src="https://media.discordapp.net/attachments/973896772336369675/983645462621978635/envoiepaire.jpg" style="width: 440px; height:30px;">
+       <img src="https://media.discordapp.net/attachments/1092938363222376540/1094305304436555907/envoiepaire.jpg" style="width: 440px; height:30px;">
        <br>
        <p>Le code affiché ensuite montre le dropdown des paires. tout d'abord, j'ai fais un tableau qui se remplit automatiquement des paires, une fois fais je parcours mon tableau à l'aide d'un foreach, ensuite en PHP je mets en place le système de date avec un isset qui vérifie la présence de date ou non afin qu'il m'envoie en URL ces données.</p>
-       <img src="https://media.discordapp.net/attachments/973896772336369675/983646145878298724/droppaire.jpg" style="width: 440px; height: 40px;">
+       <img src="https://media.discordapp.net/attachments/1092938363222376540/1094305539942527077/droppaire.jpg" style="width: 440px; height: 40px;">
        <p>La première partie graphique, tout d'abord je récupère la variable envoyé qui est le nom de la paire par un GET, ensuite je vérifie si les deux dates sont remplies, si oui je les inclus dans ma requète SQL sinon non. les requètes SQL tiennent compte aussi l'idUser de celui qui se connecte.</p>
 
-       <img src="https://media.discordapp.net/attachments/973896772336369675/983646681641914408/getpairegraphique.jpg" style="width: 440px; height:200px;"><br>
+       <img src="https://media.discordapp.net/attachments/1092938363222376540/1094305811427250276/getpairegraphique.jpg" style="width: 440px; height:200px;"><br>
        <p>Seconde partie graphique, j'ai recupéré un exemple à partir du site CHART JS et je l'ai exploité. Pour afficher les buy et sell je fais un while de ma requête ->fetch_assoc() etje récupère la colonne qui m'intéresse grâce à la variable qui stocke toutes les colonnes. Ensuite pour afficher les dates je fais la même étape sauf que pour la rendre directement plus compréhensible je l'ai mis en format Européen grâce à la commande "date("d-m-Y,strtotime($date));" qui permet de changer le format de date.</p>
        <h2 class="font-weight-bold text-decoration-underline">III- Conclusion</h2>
        <p class="font-weight-bold">Pour conclure ce projet, l'expérience en entreprise m'a permis de réaliser plein de chose notamment au niveau de l'organisation (mon code, gestion du projet), mais aussi l'importance de la sécurité des données et comment le mettre en place efficacement. Je remercie mon maitre de stage ainsi que son employé de m'avoir pris comme stagiaire et de m'avoir appris plein de connaissances.</p>
       </div>
+
+      <h2>Lien téléchargement projet :</h2>
+                     <a type="button" class="btn btn-success" href="https://github.com/ValentinBrebion/projet_dashboard_cryptomonnaie.git">Lien du projet sur mon github</a>
+
 
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
