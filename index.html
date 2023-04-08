@@ -182,10 +182,10 @@
                   </div><br>
                   <h2>Explication :</h2><br>
        <p>Un projet scolaire réalisé dans le lycée Jean Delattre de Tassigny à la Roche Sur Yon en 1ère STI2D. Un projet pour 4 personnes, 1 pour la consommation ( mesure du niveau de la batterie), 1 pour l'application, 1 pour la mesure du produit et 1 pour la mesure de l'altitude. J'étais en charge de la partie Altitude, la première partie à faire était de définir quel capteur j'allais choisir pour remplir ma partie.</p>
-       <img src="https://media.discordapp.net/attachments/973896772336369675/983649065738854450/listecapteur.jpg?width=331&height=409">
+       <img src="https://media.discordapp.net/attachments/1092938363222376540/1094248491607404664/listecapteur.jpg?width=472&height=583">
        <p>Pour déterminer quel capteur choisir, je devais faire une liste de 3 capteurs minimum et présenter leurs caractéristiques. Au final, j'ai pris le capteur à ultrason.</p>
        <h2 class="font-weight-bold text-decoration-underline">II- Développement</h2>
-       <img src="https://media.discordapp.net/attachments/973896772336369675/983649475161640991/declarationvariable.jpg" style=" height:300px;">
+       <img src="https://media.discordapp.net/attachments/1092938363222376540/1094248008398422076/declaration_variable.png?width=598&height=583" style=" height:300px;">
        <p>La première chose à faire était d'importer les bibliothèques disponible dans le logiciel Arduino.<br><br></p>
 
 <h4 class="font-weight-bold">->NRFLite</h4><p>:est la bibliothèque téléchargeable dans le logiciel Arduino qui permet d'envoyer des paquets de données de taille dynamique.</p><br>
@@ -196,19 +196,22 @@
 <h4 class="font-weight-bold">Const static Déclaration</h4><p> du type de variable que l'on veut mettre dans le programme.</p>
 <h4 class="font-weight-bold">Struct RadioPacket</h4><p> Déclaration des paquets à envoyer.</p>
 <hr>
-<img src="https://media.discordapp.net/attachments/973896772336369675/983651142204526592/voidsetup.jpg" style=" height:180px;">
+<img src="https://media.discordapp.net/attachments/1092938363222376540/1094248942889353226/void_setup_moyenne.png?width=701&height=583" style=" height:180px;">
 <p>Pour continuer, viens la partie construction du void setup ou on définit le moteur, la led et le buzzer.</p>
 
 <h4 class="font-weight-bold">pinMode</h4><p> : Cette fonction a pour but de définir le type de l'objet utilisé. OUTPUT : configuration en sortie (celui qui va recevoir un ordre)</p>
 <h4 class="font-weight-bold">radio.init</h4><p> Déclaration de la communication radio.<br>
 for i=0; i<5;i++On créer une boucle qui va ajouter les valeurs données par le capteur au fur et à mesure.</p>
-  <img src="https://media.discordapp.net/attachments/973896772336369675/983652615650938890/fordefinitionimpulsion.jpg" style=" width:450px;">
+  <img src="https://media.discordapp.net/attachments/1092938363222376540/1094249637025681508/for_moyenne.png?width=732&height=583" style=" width:450px;">
   <p><h4 class="font-weight-bold">digitalWrite</h4><p> Cette fonction a pour but de mettre en marche le capteur grâce à l'attribut "LOW" ou "HIGH".</p>
 <h4 class="font-weight-bold">delayMicrosecond</h4><p> attend un delay de x microsecond.</p>
-<img src="https://media.discordapp.net/attachments/973896772336369675/983653534132232242/2-3menvoiealtitude.jpg" style=" width:450px;">
+<img src="https://media.discordapp.net/attachments/1092938363222376540/1094250314879742103/1_altitude.png?width=441&height=583" style=" width:450px;">
 <h4 class="font-weight-bold">les conditions if AltMoy < 2 m 45</h4><p> Pour éviter que le drone ne s'écrase, j'ai mis en place une série de condition sur la hauteur du drône pour éviter que le drône ne se crash et n'abime les plantations.</p>
  <h2 class="font-weight-bold text-decoration-underline">III- Conclusion</h2>
  <p class="font-weight-bold">Pour conclure ce projet, j'ai appris à mettre en place une série de test, à partager mes avancés à travers de comptes-rendus réalisés tous les mois (3mois). J'ai aussi appris à choisir un capteur en prenant en compte leurs caractéristiques.</p>
+ <h2>Lien téléchargement projet :</h2>
+ <a type="button" class="btn btn-success" href="https://github.com/ValentinBrebion/Projet_drone_CalculeMoyenne_STI2D.git">Lien du projet sur mon github</a>
+
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
