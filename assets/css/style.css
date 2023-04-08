@@ -1176,8 +1176,9 @@ section {
   height: 36px;
   transition: 0.3s;
 }
-.textcolor{
-  color: ;
+.portfolio-detail-text{
+ bottom: 10px;
+ text-align: center;
 }
 #footer .footer-top .social-links a:hover {
   background: #67b0d1;
