@@ -276,6 +276,12 @@ nav summary::-webkit-details-marker {
       margin-bottom: 1rem;
       font-style: italic;
       color: #6C6170;
+      font-size: 1.6rem;
+    }
+    .projets__1 p:nth-of-type(3),
+    .projets__2 p:nth-of-type(3),
+    .projets__3 p:nth-of-type(3) {
+      font-size: 1.6rem;
     }
     .formations {
       padding: 1rem 1rem 2rem 2rem;
