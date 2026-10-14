@@ -1,4 +1,12 @@
 @charset "UTF-8";
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("../font/CormorantGaramond-VariableFont_wght.woff") format("woff");
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+}
+
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -93,6 +101,7 @@ nav summary::-webkit-details-marker {
     --secondary: #C16D45;
     --tertiary: #2A211A;
 }
+
 .left-side{
     height: 100vh;
     background-color: white;
@@ -212,14 +221,216 @@ nav summary::-webkit-details-marker {
         color: white;
       }
     }
-    .projets {
-      padding:1rem 1rem 2rem 1rem;
-      background-color: #F7F6F2;
-      p {
-        color: var(--secondary);
+    .a-propos {
+      padding: 1rem 1rem 2rem 2rem;
+      h2 {
+        margin-bottom: 1rem;
+        color: var(--tertiary);
+        font-family: "Cormorant Garamond", serif;
+        font-size: 4rem;
+        font-weight: 700;
+        line-height: 1.1;
       }
+    }
+    .a-propos__texte {
+      max-width: 70rem;
+      margin-bottom: 1.2rem;
+      color: #625c65;
+      font-size: 1.6rem;
+      line-height: 1.6;
+    }
+    .a-propos__titre {
+      margin: 2rem 0 1rem;
+      color: var(--tertiary);
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    .a-propos__diplomes {
+      max-width: 70rem;
+      margin-bottom: 1.5rem;
+      padding-left: 1.8rem;
+      list-style: disc;
+      color: #625c65;
+      font-size: 1.5rem;
+      line-height: 1.6;
+      li {
+        margin-bottom: 0.8rem;
+      }
+      strong {
+        color: var(--tertiary);
+        font-weight: bold;
+      }
+    }
+    .projets {
+      padding:1rem 1rem 2rem 2rem;
+      background-color: #F7F6F2;
       h1 {
         font-size: 50px;
+        margin-bottom: 5px;
+      }
+    }
+    .projets__info {
+        color: var(--secondary);
+    }
+    .projets__subinfo {
+      margin-bottom: 1rem;
+      font-style: italic;
+      color: #6C6170;
+    }
+    .formations {
+      padding: 1rem 1rem 2rem 2rem;
+      background-color: #F7F6F2;
+      h2 {
+        font-size: 50px;
+        margin-bottom: 1rem;
+      }
+    }
+    .formations__intro {
+      max-width: 70rem;
+      margin-bottom: 1rem;
+      color: #625c65;
+      line-height: 1.5;
+    }
+    .formation {
+      padding: 2rem 0;
+      border-bottom: 1px solid #EBE9E5;
+      h3 {
+        margin-bottom: 0.8rem;
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 1.2;
+      }
+    }
+    .formation:first-child {
+      border-top: 1px solid #EBE9E5;
+    }
+    .formation__dates {
+      margin-bottom: 0.8rem;
+      color: #6C6170;
+    }
+    .formation__etablissement {
+      color: var(--secondary);
+      line-height: 1.4;
+    }
+    .contact {
+      padding: 2rem 1rem 3rem 2rem;
+      background-color: var(--primary);
+      h2 {
+        margin-bottom: 1rem;
+        color: var(--tertiary);
+        font-family: "Cormorant Garamond", serif;
+        font-size: 4rem;
+        font-weight: 700;
+        line-height: 1.1;
+      }
+    }
+    .contact__texte {
+      margin-bottom: 1.5rem;
+      color: #625c65;
+      font-size: 1.6rem;
+      line-height: 1.5;
+    }
+    .contact__lien {
+      display: inline-block;
+      padding: 1rem 1.4rem;
+      border-radius: 10px;
+      background-color: var(--secondary);
+      color: white;
+      font-size: 1.6rem;
+      text-decoration: none;
+    }
+    .site-footer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1rem 2rem;
+      padding: 1.8rem 2rem;
+      border-top: 1px solid #EBE9E5;
+      background-color: var(--primary);
+      color: #6C6170;
+      font-size: 1.3rem;
+      line-height: 1.5;
+      a {
+        color: var(--tertiary);
+        text-decoration: none;
+      }
+      a:hover,
+      a:focus-visible {
+        color: var(--secondary);
+        text-decoration: underline;
+      }
+    }
+    .projets__1 {
+      border-bottom: 1px solid #EBE9E5;
+      border-top: 1px solid #EBE9E5;
+      padding: 2rem 0rem ;
+      h3 {
+        font-size: 20px;
+        font-weight: bold;
+      }
+      p:first-child {
+        color: #6C6170;
+        margin-bottom: 10px;
+      }
+      p:nth-of-type(2) {
+        font-style: italic;
+        color: #6C6170;
+        margin-bottom: 10px;
+      }
+      p:nth-of-type(3) {
+      color: #625c65;
+      margin-bottom: 10px;
+      }
+      p:nth-of-type(4) {
+        color: var(--secondary);
+      }
+    }
+    .projets__2 {
+      padding: 2rem 0rem;
+      border-bottom: 1px solid #EBE9E5;
+      h3 {
+        font-size: 20px;
+        font-weight: bold;
+      }
+      p:first-child {
+        color: #6C6170;
+        margin-bottom: 10px;
+      }
+      p:nth-of-type(2) {
+        font-style: italic;
+        color: #6C6170;
+        margin-bottom: 10px;
+      }
+      p:nth-of-type(3) {
+      color: #625c65;
+      margin-bottom: 10px;
+      }
+      p:nth-of-type(4) {
+        color: var(--secondary);
+      }
+    }
+    .projets__3 {
+      padding: 2rem 0rem;
+      border-bottom: 1px solid #EBE9E5;
+      h3 {
+        font-size: 20px;
+        font-weight: bold;
+      }
+      p:first-child {
+        color: #6C6170;
+        margin-bottom: 10px;
+      }
+      p:nth-of-type(2) {
+        font-style: italic;
+        color: #6C6170;
+        margin-bottom: 10px;
+      }
+      p:nth-of-type(3) {
+      color: #625c65;
+      margin-bottom: 10px;
+      }
+      p:nth-of-type(4) {
+        color: var(--secondary);
       }
     }
 }
