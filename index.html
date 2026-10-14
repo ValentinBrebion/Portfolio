@@ -19,19 +19,25 @@
 </head>
 <body>
   <nav aria-label="Navigation principale">
-        <a href="#accueil">Valentin Brebion</a>
-        <details>
-            <summary aria-label="Ouvrir ou fermer le menu">
-                <span aria-hidden="true">☰</span>
-            </summary>
-            <ul>
-                <li><a href="#projets">Projets</a></li>
-                <li><a href="#a-propos">À propos</a></li>
-                <li><a href="#formation">Formation</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </details>
-    </nav>
+      <a href="#accueil">Valentin Brebion</a>
+      <ul class="nav__desktop-links">
+          <li><a href="#projets">Projets</a></li>
+          <li><a href="#a-propos">À propos</a></li>
+          <li><a href="#formation">Formation</a></li>
+          <li><a href="#contact">Contact</a></li>
+      </ul>
+      <details class="nav__mobile-menu">
+          <summary aria-label="Ouvrir ou fermer le menu">
+              <span aria-hidden="true">☰</span>
+          </summary>
+          <ul>
+              <li><a href="#projets">Projets</a></li>
+              <li><a href="#a-propos">À propos</a></li>
+              <li><a href="#formation">Formation</a></li>
+              <li><a href="#contact">Contact</a></li>
+          </ul>
+      </details>
+  </nav>
     <header class="banner" id="accueil">
         <p class="banner__info">Développeur Full Stack Web - Vendée</p>
         <h1>Des interfaces rapides, accessibles et <span>soignées</span>.</h1>
