@@ -15,7 +15,7 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
-</script>
+  <script src="assets/js/main.js" defer></script>
 </head>
 <body>
   <nav aria-label="Navigation principale">
@@ -47,84 +47,140 @@
             <a href="CVValentinBrebion.pdf">Télécharger mon CV</a>
         </div>
     </header>
-    <section class="a-propos" id="a-propos">
-      <p class="projets__info">À propos</p>
-      <h2>Un peu plus sur moi</h2>
-      <p class="a-propos__texte">J’ai 25 ans et je suis développeur web full stack. Mon parcours m’a permis d’explorer le développement d’applications sous plusieurs angles, du web à la conception de solutions numériques.</p>
-      <h3 class="a-propos__titre">Ma boîte à outils</h3>
-      <p class="a-propos__texte">Je travaille avec PHP, JavaScript, TypeScript et SQL, ainsi qu’avec Symfony et Vue.js. J’apprécie autant la réflexion autour de la structure d’une application que le soin apporté à son interface et à son usage.</p>
-      <p class="a-propos__texte">Curieux et motivé, je souhaite continuer à apprendre et contribuer à des projets concrets, utiles et bien conçus.</p>
-    </section>
-    <section class="projets" id="projets">
-      <p class="projets__info">Réalisations</p>
-      <h1>Projets</h1>
-      <p class="projets__subinfo">Une sélection de travaux récents — produits livrés, outils open source et expérimentations personnelles.</p>
-
-      <article class="projets__1">
-        <p>2026</p>
-        <h3>Angular Java Name projet</h3>
-        <p>Développement front-end et back-end</p>
-        <p>Refonte complète d'une boutique en ligne : catalogue temps réel, panier optimiste et paiement en une page. Temps de chargement divisé par trois.</p>
-        <p>Angular . Java . Git</p>
-      </article>
-      <article class="projets__2">
-        <p>2026</p>
-        <h3>Angular Java Name projet</h3>
-        <p>Développement front-end et back-end</p>
-        <p>Refonte complète d'une boutique en ligne : catalogue temps réel, panier optimiste et paiement en une page. Temps de chargement divisé par trois.</p>
-        <p>Angular . Java . Git</p>
-      </article>
-      <article class="projets__3">
-        <p>2026</p>
-        <h3>Angular Java Name projet</h3>
-        <p>Développement front-end et back-end</p>
-        <p>Refonte complète d'une boutique en ligne : catalogue temps réel, panier optimiste et paiement en une page. Temps de chargement divisé par trois.</p>
-        <p>Angular . Java . Git</p>
-      </article>
-    </section>
-    <section class="formations" id="formation">
-      <p class="projets__info">Parcours</p>
-      <h2>Formation</h2>
-      <p class="formations__intro">Mon parcours académique</p>
-
-      <div class="formations__liste">
-        <article class="formation">
-          <p class="formation__dates">2024 – 2025</p>
-          <h3>Bachelor Numérique</h3>
-          <p class="formation__etablissement">ESAIP — Angers</p>
-        </article>
-        <article class="formation">
-          <p class="formation__dates">2024 – 2025</p>
-          <h3>Licence Concepteur Développeur d’Applications</h3>
-          <p class="formation__etablissement">Campus Le Roc — La Roche-sur-Yon</p>
-        </article>
-        <article class="formation">
-          <p class="formation__dates">2023 – 2024</p>
-          <h3>Licence Développeur Web Full Stack</h3>
-          <p class="formation__etablissement">Université La Rochelle — La Rochelle</p>
-        </article>
-        <article class="formation">
-          <p class="formation__dates">2020 – 2023</p>
-          <h3>BTS SIO</h3>
-          <p class="formation__etablissement">Lycée Chevrollier — Angers</p>
-        </article>
-        <article class="formation">
-          <p class="formation__dates">2018 – 2020</p>
-          <h3>Bac STI2D — option SIN (Système d’Information Numérique)</h3>
-          <p class="formation__etablissement">Lycée Jean de Lattre de Tassigny — La Roche-sur-Yon</p>
-        </article>
+    <main>
+      <div class="helperIA">
+        <img src="assets/img/imageIA.png" alt="robot ia" />
       </div>
-    </section>
-    <section class="contact" id="contact">
-      <p class="projets__info">Échangeons</p>
-      <h2>Un projet en tête ?</h2>
-      <p class="contact__texte">Une question, une idée ou une opportunité ? Écrivez-moi, je serai ravi d’en discuter avec vous.</p>
-      <a class="contact__lien" href="mailto:vb.brebionpro@gmail.com">vb.brebionpro@gmail.com</a>
-    </section>
+      <div class="iaDisplay displayOff">
+        <header>
+          <div>
+            <img style="width: 20px; height: 20px;" src="assets/img/imageIA.png" alt="robot ia" />
+            <div>
+              <p>V.I.A</p>
+              <p>Assistant Portfolio - En Ligne</p>
+            </div>
+          </div>
+          <details name="faq">
+            <summary>
+              <svg class="iaDisplay__faq-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m2 10 10-5 10 5-10 5-10-5Z"></path>
+                <path d="M6 12v5c3 2.5 9 2.5 12 0v-5M22 10v6"></path>
+              </svg>
+              <span>Comprendre mon parcours</span>
+            </summary>
+            <p class="typingEffect">Ayant obtenu mon bac STI2D option SIN, je suis parti à Angers pour obtenir le BTS SIO à Angers. Voulant continuer dans la filière du développeur web, je suis parti à la Rochelle pour obtenir un diplôme développeur Web Full Stack. J'ai complété mon cursus en obtenant le diplôme de développeur Concepteur d'Applications ainsi que le diplôme de bachelor numérique à l'école d'Angers.</p>
+          </details>
+
+          <details name="comp">
+            <summary>
+              <svg class="iaDisplay__faq-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m8 8-4 4 4 4M16 8l4 4-4 4M14 5l-4 14"></path>
+              </svg>
+              <span>Explorer mes compétences</span>
+            </summary>
+            <p class="typingEffect">J'ai travaillé pendant 3 ans sur plusieurs framework comme Vuejs ou encore Symfony. J'utilise Docker pour conteneuriser mes applications. En parallèle je poursuis plusieurs formations sur openclassroom comme angular ou Java.</p>
+          </details>
+          <details name="proj">
+            <summary>
+              <svg class="iaDisplay__faq-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 6h7l2 2h9v11H3z"></path>
+                <path d="M3 10h18"></path>
+              </svg>
+              <span>Découvrir mes projets</span>
+            </summary>
+            <p class="typingEffect">Découvrez Snapface, une application développée avec Angular pour explorer le framework. Parcourez les snaps publiés et aimez ceux qui vous plaisent.</p>
+          </details>
+        </header>
+      </div>
+      <section class="a-propos" id="a-propos">
+        <p class="projets__info">À propos</p>
+        <h2>Un peu plus sur moi</h2>
+        <p class="a-propos__texte">J’ai 25 ans et je suis développeur web full stack. Mon parcours m’a permis d’explorer le développement d’applications sous plusieurs angles, du web à la conception de solutions numériques.</p>
+        <h3 class="a-propos__titre">Ma boîte à outils</h3>
+        <p class="a-propos__texte">Je travaille avec PHP, JavaScript, TypeScript et SQL, ainsi qu’avec Symfony et Vue.js. J’apprécie autant la réflexion autour de la structure d’une application que le soin apporté à son interface et à son usage.</p>
+        <p class="a-propos__texte">Curieux et motivé, je souhaite continuer à apprendre et contribuer à des projets concrets, utiles et bien conçus.</p>
+      </section>
+      <section class="projets" id="projets">
+        <p class="projets__info">Réalisations</p>
+        <h1>Projets</h1>
+        <p class="projets__subinfo">Une sélection de travaux récents — produits livrés, outils open source et expérimentations personnelles.</p>
+
+        <article class="projets__1">
+          <p>2026</p>
+          <h3>Snapface</h3>
+          <p>Application développée avec Angular pour découvrir le framework.</p>
+          <p>Parcourez les snaps partagés et aimez vos publications préférées.</p>
+          <p>Angular</p>
+          <a class="projets__1-lien" href="https://angular-project-zeta-virid.vercel.app/" target="_blank" rel="noopener noreferrer">Découvrir Snapface</a>
+        </article>
+        <article class="projets__3">
+          <p>2023 - 2024</p>
+          <h3>Refonte du site de la SPA de Lagord</h3>
+          <p>Refonte du site internet de la SPA de Lagord pour mieux présenter l’association et ses actions.</p>
+          <p>Maquettes réalisées avec Figma, puis intégration et mise en ligne avec WordPress.</p>
+          <p>Figma . WordPress</p>
+          <a class="projets__1-lien" href="https://spa-lagord.org/" target="_blank" rel="noopener noreferrer">Voir le site</a>
+        </article>
+      </section>
+      <section class="formations" id="formation">
+        <p class="projets__info">Parcours</p>
+        <h2>Formation</h2>
+        <p class="formations__intro">Mon parcours académique</p>
+
+        <div class="formations__liste">
+          <article class="formation">
+            <p class="formation__dates">2024 – 2025</p>
+            <h3>Bachelor Numérique</h3>
+            <p class="formation__etablissement">ESAIP — Angers</p>
+          </article>
+          <article class="formation">
+            <p class="formation__dates">2024 – 2025</p>
+            <h3>Licence Concepteur Développeur d’Applications</h3>
+            <p class="formation__etablissement">Campus Le Roc — La Roche-sur-Yon</p>
+          </article>
+          <article class="formation">
+            <p class="formation__dates">2023 – 2024</p>
+            <h3>Licence Développeur Web Full Stack</h3>
+            <p class="formation__etablissement">Université La Rochelle — La Rochelle</p>
+          </article>
+          <article class="formation">
+            <p class="formation__dates">2020 – 2023</p>
+            <h3>BTS SIO</h3>
+            <p class="formation__etablissement">Lycée Chevrollier — Angers</p>
+          </article>
+          <article class="formation">
+            <p class="formation__dates">2018 – 2020</p>
+            <h3>Bac STI2D — option SIN (Système d’Information Numérique)</h3>
+            <p class="formation__etablissement">Lycée Jean de Lattre de Tassigny — La Roche-sur-Yon</p>
+          </article>
+        </div>
+      </section>
+      <section class="contact" id="contact">
+        <p class="projets__info">Échangeons</p>
+        <h2>Un projet en tête ?</h2>
+        <p class="contact__texte">Une question, une idée ou une opportunité ? Écrivez-moi, je serai ravi d’en discuter avec vous.</p>
+        <a class="contact__lien" href="mailto:vb.brebionpro@gmail.com">vb.brebionpro@gmail.com</a>
+      </section>
+    </main>
     <footer class="site-footer">
-      <p>© 2026 Valentin Brebion</p>
-      <a href="MentionsLégales.html">Mentions légales</a>
-      <a href="#accueil">Retour en haut ↑</a>
+      <p>© 2026 Valentin Brebion - Développeur Vendée</p>
+      <nav class="site-footer__links" aria-label="Liens de contact et réseaux sociaux">
+        <a href="https://github.com/ValentinBrebion" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false">
+            <path d="M12 .75a11.25 11.25 0 0 0-3.56 21.92c.56.1.77-.24.77-.54v-2.1c-3.14.68-3.8-1.33-3.8-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.69.08-.69 1.13.08 1.73 1.16 1.73 1.16 1 1.72 2.61 1.22 3.25.93.1-.73.39-1.22.71-1.5-2.5-.28-5.13-1.25-5.13-5.57 0-1.23.44-2.23 1.16-3.02-.12-.29-.5-1.43.11-2.98 0 0 .95-.3 3.1 1.15a10.8 10.8 0 0 1 5.64 0c2.15-1.45 3.1-1.15 3.1-1.15.61 1.55.23 2.69.11 2.98.72.79 1.16 1.79 1.16 3.02 0 4.33-2.64 5.28-5.15 5.56.4.35.76 1.03.76 2.08v3.11c0 .3.2.65.77.54A11.25 11.25 0 0 0 12 .75Z"/>
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/in/valentin-brebion-8372031b8/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false">
+            <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.59 0 4.26 2.36 4.26 5.43v6.31ZM5.35 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.13 20.45H3.57V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.44c.98 0 1.79-.77 1.79-1.72V1.72C24 .77 23.19 0 22.22 0Z"/>
+          </svg>
+        </a>
+        <a href="mailto:vb.brebionpro@gmail.com" aria-label="Email">
+          <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false">
+            <path d="M3 5.5h18a1.5 1.5 0 0 1 1.5 1.5v10a1.5 1.5 0 0 1-1.5 1.5H3A1.5 1.5 0 0 1 1.5 17V7A1.5 1.5 0 0 1 3 5.5Zm9 7.1L3.5 7.25v9.5h17v-9.5L12 12.6Zm0-1.8 7.1-4.3H4.9l7.1 4.3Z"/>
+          </svg>
+        </a>
+      </nav>
     </footer>
 </body>
 
