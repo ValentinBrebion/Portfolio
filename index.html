@@ -16,6 +16,16 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
   <script src="assets/js/main.js" defer></script>
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
+      }
+    }
+  </script>
+  <script type="module" src="assets/js/robot.js"></script>
+
 </head>
 <body>
   <nav aria-label="Navigation principale">
@@ -49,7 +59,7 @@
     </header>
     <main>
       <div class="helperIA">
-        <img src="assets/img/imageIA.png" alt="robot ia" />
+        <div id="robot-container" ></div>
       </div>
       <div class="iaDisplay displayOff">
         <header>

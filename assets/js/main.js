@@ -2,7 +2,8 @@ const buttonAddCard = document.querySelector('.helperIA');
 const iaDisplay = document.querySelector('.iaDisplay');
 
 buttonAddCard.addEventListener('click', () => {
-  iaDisplay.classList.toggle('displayOff');
+  const isClosed = iaDisplay.classList.toggle('displayOff');
+  buttonAddCard.classList.toggle('reduceIa', !isClosed);
 });
 
 document.querySelectorAll('.typingEffect').forEach((typingEffect) => {

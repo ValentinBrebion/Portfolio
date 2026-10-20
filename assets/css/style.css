@@ -126,12 +126,26 @@ nav > a {
   font-weight: 700;
   text-decoration: none;
 }
+#robot-container {
+  animation: float 3s ease-in-out infinite;
+}
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 .iaDisplay {
   position: fixed;
   bottom: 9rem;
   right: 2rem;
   z-index: 20;
-  width: min(32rem, calc(100vw - 4rem));
+  width: min(32rem, calc(100vw - 54rem));
   padding: 1.6rem;
   border-radius: 1.2rem;
   background: var(--primary);
@@ -160,11 +174,16 @@ nav > a {
   bottom: 2rem;
   right: 2rem;
   z-index: 20;
-  width: 70px;
-  height: 50px;
+  width: min(220px, 45vw);
+  height: min(220px, 45vw);
+  transform-origin: bottom right;
+  transition: transform 300ms ease;
   img {
     cursor: pointer;
   }
+}
+.helperIA.reduceIa {
+  transform: scale(0.35);
 }
 .typingEffect {
   width: 100%;
@@ -176,9 +195,6 @@ nav > a {
   50% {
     border-color: transparent;
   }
-}
-.displayOn {
-  display: block;
 }
 .displayOff {
   display: none;
@@ -935,4 +951,16 @@ nav > a {
         color: var(--secondary);
       }
     }
+}
+
+#robot-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+#robot-container canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
