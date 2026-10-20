@@ -28,9 +28,9 @@ renderer.outputColorSpace = THREE.SRGBColorSpace;
 
 container.appendChild(renderer.domElement);
 
-scene.environmentIntensity = 0.6;
+scene.environmentIntensity = 0.9;
 
-scene.add(new THREE.HemisphereLight(0xffffff, 0x888899, 0.4));
+scene.add(new THREE.HemisphereLight(0xffffff, 0x888899, 1.5));
 
 const light = new THREE.DirectionalLight(0xffffff, 1.5);
 light.position.set(2, 3, 6);
