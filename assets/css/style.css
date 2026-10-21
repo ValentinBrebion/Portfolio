@@ -558,7 +558,9 @@ nav > a {
   nav {
     padding-inline: 2.4rem;
   }
-
+  .helperIA {
+      display: none;
+    }
   .nav__desktop-links {
     gap: 1.6rem;
   }
@@ -600,6 +602,10 @@ nav > a {
 
 /* Mobile (max-width: 480px) */
 @media (max-width: 480px) {
+    .helperIA {
+      display: none;
+    }
+
     body {
         flex-direction: column;
     }
