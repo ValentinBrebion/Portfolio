@@ -4,6 +4,10 @@ const iaDisplay = document.querySelector('.iaDisplay');
 buttonAddCard.addEventListener('click', () => {
   const isClosed = iaDisplay.classList.toggle('displayOff');
   buttonAddCard.classList.toggle('reduceIa', !isClosed);
+  buttonAddCard.classList.remove('moveIa');
+  document.dispatchEvent(new CustomEvent('assistant-visibility-change', {
+    detail: { isOpen: !isClosed }
+  }));
 });
 
 document.querySelectorAll('.typingEffect').forEach((typingEffect) => {

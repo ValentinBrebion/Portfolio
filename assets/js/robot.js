@@ -4,6 +4,29 @@ import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 
 
 const container = document.querySelector('#robot-container');
+const helperIA = document.querySelector('.helperIA');
+let robotPivot;
+let robotRotation = -180;
+
+document.addEventListener('assistant-visibility-change', (event) => {
+  if (!event.detail.isOpen) {
+    robotRotation = -180;
+    if (robotPivot) {
+      robotPivot.rotation.y = THREE.MathUtils.degToRad(robotRotation);
+    }
+  }
+});
+
+document.querySelectorAll('.iaDisplay details').forEach((details) => {
+  details.addEventListener('click', () => {
+    helperIA.classList.remove('reduceIa');
+    helperIA.classList.add('moveIa');
+    robotRotation = -150;
+    if (robotPivot) {
+      robotPivot.rotation.y = THREE.MathUtils.degToRad(robotRotation);
+    }
+  });
+});
 
 const scene = new THREE.Scene();
 
@@ -45,7 +68,7 @@ loader.load(
     
     robot.traverse((o) => {
     if (o.isMesh) {
-      console.log(o.name, o.material.color.getHexString(), o.material.metalness, o.material.roughness);
+      //console.log(o.name, o.material.color.getHexString(), o.material.metalness, o.material.roughness);
     }
   });
     // Ajuster automatiquement la taille du modèle
@@ -60,10 +83,10 @@ robot.scale.setScalar(scale);
 robot.position.copy(center).multiplyScalar(-scale);
 
 // Pivot : permet de tourner le perso autour de son centre
-const pivot = new THREE.Group();
-pivot.add(robot);
-pivot.rotation.y = THREE.MathUtils.degToRad(-180);
-scene.add(pivot);
+robotPivot = new THREE.Group();
+robotPivot.add(robot);
+robotPivot.rotation.y = THREE.MathUtils.degToRad(robotRotation);
+scene.add(robotPivot);
 
     // Lire la première animation Blender, si disponible
     let mixer;

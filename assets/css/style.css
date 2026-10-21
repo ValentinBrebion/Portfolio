@@ -177,10 +177,13 @@ nav > a {
   width: min(220px, 45vw);
   height: min(220px, 45vw);
   transform-origin: bottom right;
-  transition: transform 300ms ease;
-  img {
+  transition: right 300ms ease, transform 300ms ease;
+  canvas {
     cursor: pointer;
   }
+}
+.helperIA.moveIa {
+  right: 36rem;
 }
 .helperIA.reduceIa {
   transform: scale(0.35);
