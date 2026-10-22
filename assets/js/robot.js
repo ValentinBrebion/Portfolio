@@ -1,30 +1,56 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
-
 
 const container = document.querySelector('#robot-container');
 const helperIA = document.querySelector('.helperIA');
 let robotPivot;
 let robotRotation = -180;
+let robotAnimation;
+let assistantOpen = false;
+const assistantDetails = document.querySelectorAll('.iaDisplay details');
+
+function setRobotRotation(degrees) {
+  robotRotation = degrees;
+  if (robotPivot) {
+    robotPivot.rotation.y = THREE.MathUtils.degToRad(degrees);
+  }
+}
+
+function updateRobotAnimation() {
+  const shouldAnimate = assistantOpen
+    && Array.from(assistantDetails).some((details) => details.open);
+
+  helperIA.classList.toggle('robotActive', shouldAnimate);
+
+  if (!robotAnimation) {
+    return;
+  }
+
+  if (shouldAnimate) {
+    if (!robotAnimation.isRunning()) {
+      robotAnimation.reset().play();
+    }
+  } else if (robotAnimation.isRunning()) {
+    robotAnimation.stop();
+  }
+}
 
 document.addEventListener('assistant-visibility-change', (event) => {
+  assistantOpen = event.detail.isOpen;
   if (!event.detail.isOpen) {
-    robotRotation = -180;
-    if (robotPivot) {
-      robotPivot.rotation.y = THREE.MathUtils.degToRad(robotRotation);
-    }
+    setRobotRotation(-180);
   }
+  updateRobotAnimation();
 });
 
-document.querySelectorAll('.iaDisplay details').forEach((details) => {
-  details.addEventListener('click', () => {
-    helperIA.classList.remove('reduceIa');
-    helperIA.classList.add('moveIa');
-    robotRotation = -150;
-    if (robotPivot) {
-      robotPivot.rotation.y = THREE.MathUtils.degToRad(robotRotation);
+assistantDetails.forEach((details) => {
+  details.addEventListener('toggle', () => {
+    if (details.open) {
+      helperIA.classList.remove('reduceIa');
+      helperIA.classList.add('moveIa');
+      setRobotRotation(-150);
     }
+    updateRobotAnimation();
   });
 });
 
@@ -65,35 +91,27 @@ loader.load(
   './assets/3d/perso.glb',
   (gltf) => {
     const robot = gltf.scene;
-    
-    robot.traverse((o) => {
-    if (o.isMesh) {
-      //console.log(o.name, o.material.color.getHexString(), o.material.metalness, o.material.roughness);
-    }
-  });
-    // Ajuster automatiquement la taille du modèle
     const box = new THREE.Box3().setFromObject(robot);
-const center = box.getCenter(new THREE.Vector3());
-const size = box.getSize(new THREE.Vector3());
+    const center = box.getCenter(new THREE.Vector3());
+    const size = box.getSize(new THREE.Vector3());
+    const maxSize = Math.max(size.x, size.y, size.z);
+    const scale = maxSize > 0 ? 2 / maxSize : 1;
 
-const maxSize = Math.max(size.x, size.y, size.z);
-const scale = maxSize > 0 ? 2 / maxSize : 1;
+    robot.scale.setScalar(scale);
+    robot.position.copy(center).multiplyScalar(-scale);
 
-robot.scale.setScalar(scale);
-robot.position.copy(center).multiplyScalar(-scale);
+    robotPivot = new THREE.Group();
+    robotPivot.add(robot);
+    setRobotRotation(robotRotation);
+    scene.add(robotPivot);
 
-// Pivot : permet de tourner le perso autour de son centre
-robotPivot = new THREE.Group();
-robotPivot.add(robot);
-robotPivot.rotation.y = THREE.MathUtils.degToRad(robotRotation);
-scene.add(robotPivot);
+    const mixer = gltf.animations.length > 0
+      ? new THREE.AnimationMixer(robot)
+      : null;
 
-    // Lire la première animation Blender, si disponible
-    let mixer;
-
-    if (gltf.animations.length > 0) {
-      mixer = new THREE.AnimationMixer(robot);
-      mixer.clipAction(gltf.animations[0]).play();
+    if (mixer) {
+      robotAnimation = mixer.clipAction(gltf.animations[0]);
+      updateRobotAnimation();
     }
 
     const clock = new THREE.Clock();
