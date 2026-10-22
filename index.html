@@ -5,9 +5,15 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Portfolio Valentin</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <title>Valentin Brebion | Développeur web full stack</title>
+  <meta name="description" content="Valentin Brebion, développeur web full stack en recherche d’un CDI, disponible immédiatement et mobile partout en France. Découvrez ses projets et compétences.">
+  <meta name="keywords" content="Valentin Brebion, développeur web full stack, développeur web, CDI, Vendée, portfolio, Angular, Symfony, Vue.js">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Valentin Brebion | Développeur web full stack">
+  <meta property="og:description" content="Découvrez le parcours, les compétences et les projets de Valentin Brebion, développeur web full stack disponible immédiatement.">
+  <meta property="og:url" content="https://valentinbrebion.github.io/Portfolio/">
+  <meta property="og:image" content="https://valentinbrebion.github.io/Portfolio/assets/img/fondaccueil.jpg">
+  <meta property="og:image:alt" content="Écran de code affiché dans un éditeur de développement">
   <!-- Favicons -->
   <link href="assets/img/logo.ico" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -28,33 +34,28 @@
 
 </head>
 <body>
-  <nav aria-label="Navigation principale">
+  <nav class="site-nav" aria-label="Navigation principale">
       <a href="#accueil">Valentin Brebion</a>
-      <ul class="nav__desktop-links">
-          <li><a href="#projets">Projets</a></li>
+      <button class="nav__toggle" type="button" aria-controls="primary-navigation" aria-expanded="false" aria-label="Ouvrir le menu">
+        <span aria-hidden="true">☰</span>
+      </button>
+      <ul class="nav__links" id="primary-navigation">
           <li><a href="#a-propos">À propos</a></li>
+          <li><a href="#projets">Projets</a></li>
           <li><a href="#formation">Formation</a></li>
           <li><a href="#contact">Contact</a></li>
       </ul>
-      <details class="nav__mobile-menu">
-          <summary aria-label="Ouvrir ou fermer le menu">
-              <span aria-hidden="true">☰</span>
-          </summary>
-          <ul>
-              <li><a href="#projets">Projets</a></li>
-              <li><a href="#a-propos">À propos</a></li>
-              <li><a href="#formation">Formation</a></li>
-              <li><a href="#contact">Contact</a></li>
-          </ul>
-      </details>
   </nav>
     <header class="banner" id="accueil">
-        <p class="banner__info">Développeur Full Stack Web - Vendée</p>
+        <p class="banner__info">Développeur web full stack · Recherche un CDI · Disponible immédiatement</p>
         <h1>Des interfaces rapides, accessibles et <span>soignées</span>.</h1>
-        <p class="banner__info2">Je m'appelle Valentin Brebion et je suis développeur web full stack.</p>
+        <p class="banner__info2">Je m’appelle Valentin Brebion et je suis développeur web full stack. Mobile à La Roche-sur-Yon, Angers, Nantes, La Rochelle et partout en France.</p>
         <div class="banner__action">
             <a href="#projets">Voir mes projets</a>
-            <a href="CVValentinBrebion.pdf">Télécharger mon CV</a>
+            <a class="cv-link" href="CVValentinBrebion.pdf" download aria-describedby="cv-details">
+              Télécharger mon CV
+              <span class="cv-link__tooltip" id="cv-details" role="tooltip">PDF · 353 Ko · mis à jour en octobre 2026</span>
+            </a>
         </div>
     </header>
     <main>
@@ -64,7 +65,7 @@
       <div class="iaDisplay displayOff">
         <header>
           <div>
-            <img style="width: 20px; height: 20px;" src="assets/img/imageIA.png" alt="robot ia" />
+            <img style="width: 20px; height: 20px;" src="assets/img/imageIA.png" alt="Logo de l’assistant virtuel V.I.A." />
             <div>
               <p>V.I.A</p>
               <p>Assistant Portfolio - En Ligne</p>
@@ -78,7 +79,7 @@
               </svg>
               <span>Comprendre mon parcours</span>
             </summary>
-            <p class="typingEffect">Ayant obtenu mon bac STI2D option SIN, je suis parti à Angers pour obtenir le BTS SIO à Angers. Voulant continuer dans la filière du développeur web, je suis parti à la Rochelle pour obtenir un diplôme développeur Web Full Stack. J'ai complété mon cursus en obtenant le diplôme de développeur Concepteur d'Applications ainsi que le diplôme de bachelor numérique à l'école d'Angers.</p>
+            <p class="typingEffect">Après un bac STI2D option SIN, j’ai obtenu un BTS SIO au lycée Chevrollier. J’ai poursuivi mon parcours en développement web à La Rochelle, puis obtenu une licence Concepteur Développeur d’Applications et un bachelor numérique à l’ESAIP.</p>
           </details>
 
           <details name="comp">
@@ -88,7 +89,7 @@
               </svg>
               <span>Explorer mes compétences</span>
             </summary>
-            <p class="typingEffect">J'ai travaillé pendant 3 ans sur plusieurs framework comme Vuejs ou encore Symfony. J'utilise Docker pour conteneuriser mes applications. En parallèle je poursuis plusieurs formations sur openclassroom comme angular ou Java.</p>
+            <p class="typingEffect">J’ai travaillé pendant trois ans avec plusieurs frameworks, dont Vue.js et Symfony. J’utilise Docker pour conteneuriser mes applications et je poursuis des formations sur OpenClassrooms, notamment en Angular et en Java.</p>
           </details>
           <details name="proj">
             <summary>
@@ -107,7 +108,18 @@
         <h2>Un peu plus sur moi</h2>
         <p class="a-propos__texte">J’ai 25 ans et je suis développeur web full stack. Mon parcours m’a permis d’explorer le développement d’applications sous plusieurs angles, du web à la conception de solutions numériques.</p>
         <h3 class="a-propos__titre">Ma boîte à outils</h3>
-        <p class="a-propos__texte">Je travaille avec PHP, JavaScript, TypeScript et SQL, ainsi qu’avec Symfony et Vue.js. J’apprécie autant la réflexion autour de la structure d’une application que le soin apporté à son interface et à son usage.</p>
+        <p class="a-propos__texte">Je travaille avec plusieurs technologies et j’apprécie autant la réflexion autour de la structure d’une application que le soin apporté à son interface et à son usage.</p>
+        <ul class="a-propos__technologies" aria-label="Technologies utilisées">
+          <li>PHP</li>
+          <li>JavaScript</li>
+          <li>TypeScript</li>
+          <li>SQL</li>
+          <li>Symfony</li>
+          <li>Vue.js</li>
+          <li>Docker</li>
+          <li>Angular</li>
+          <li>Java</li>
+        </ul>
         <p class="a-propos__texte">Curieux et motivé, je souhaite continuer à apprendre et contribuer à des projets concrets, utiles et bien conçus.</p>
       </section>
       <section class="projets" id="projets">
@@ -116,20 +128,28 @@
         <p class="projets__subinfo">Une sélection de travaux récents — produits livrés, outils open source et expérimentations personnelles.</p>
 
         <article class="projets__1">
-          <p>2026</p>
+          <img class="projets__visuel" src="assets/img/portfolio/snapface-screenshot.png" alt="Capture de l’application Snapface avec la liste des snaps." loading="lazy">
+          <p class="projets__date">2026</p>
           <h3>Snapface</h3>
           <p>Application développée avec Angular pour découvrir le framework.</p>
           <p>Parcourez les snaps partagés et aimez vos publications préférées.</p>
-          <p>Angular</p>
-          <a class="projets__1-lien" href="https://angular-project-zeta-virid.vercel.app/" target="_blank" rel="noopener noreferrer">Découvrir Snapface</a>
+          <p class="projets__role">Rôle : développeur.</p>
+          <p class="projets__technologies">Angular</p>
+          <p class="projets__resultat">Résultat : une démo interactive publiée en ligne.</p>
+          <a class="projets__1-lien" href="https://angular-project-zeta-virid.vercel.app/" target="_blank" rel="noopener noreferrer">Voir la démo de Snapface</a>
+          <a class="projets__1-lien" href="https://github.com/ValentinBrebion/angularProject" target="_blank" rel="noopener noreferrer">Voir le code sur GitHub</a>
         </article>
         <article class="projets__3">
-          <p>2023 - 2024</p>
+          <img class="projets__visuel" src="assets/img/portfolio/spa-lagord-screenshot.png" alt="Capture de la page d’accueil du refuge SPA de La Rochelle et ses environs." loading="lazy">
+          <p class="projets__date">2023 - 2024</p>
           <h3>Refonte du site de la SPA de Lagord</h3>
           <p>Refonte du site internet de la SPA de Lagord pour mieux présenter l’association et ses actions.</p>
           <p>Maquettes réalisées avec Figma, puis intégration et mise en ligne avec WordPress.</p>
-          <p>Figma . WordPress</p>
-          <a class="projets__1-lien" href="https://spa-lagord.org/" target="_blank" rel="noopener noreferrer">Voir le site</a>
+          <p class="projets__role">Rôle : développeur.</p>
+          <p class="projets__technologies">Figma · WordPress</p>
+          <p class="projets__resultat">Résultat : site refondu et mis en ligne.</p>
+          <a class="projets__1-lien" href="https://spa-lagord.org/" target="_blank" rel="noopener noreferrer">Visiter le site de la SPA de Lagord</a>
+          <a class="projets__1-lien" href="https://github.com/ValentinBrebion/SPA-lagord" target="_blank" rel="noopener noreferrer">Voir le code sur GitHub</a>
         </article>
       </section>
       <section class="formations" id="formation">
@@ -169,7 +189,7 @@
         <p class="projets__info">Échangeons</p>
         <h2>Un projet en tête ?</h2>
         <p class="contact__texte">Une question, une idée ou une opportunité ? Écrivez-moi, je serai ravi d’en discuter avec vous.</p>
-        <a class="contact__lien" href="mailto:vb.brebionpro@gmail.com">vb.brebionpro@gmail.com</a>
+        <a class="contact__lien" href="mailto:vb.brebionpro@gmail.com">M’écrire à vb.brebionpro@gmail.com</a>
       </section>
     </main>
     <footer class="site-footer">

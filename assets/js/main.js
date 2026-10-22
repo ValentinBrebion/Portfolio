@@ -1,5 +1,25 @@
 const buttonAddCard = document.querySelector('.helperIA');
 const iaDisplay = document.querySelector('.iaDisplay');
+const menuToggle = document.querySelector('.nav__toggle');
+const navigationLinks = document.querySelector('.nav__links');
+
+function setMenuOpen(isOpen) {
+  menuToggle.setAttribute('aria-expanded', String(isOpen));
+  menuToggle.setAttribute('aria-label', isOpen ? 'Fermer le menu' : 'Ouvrir le menu');
+  menuToggle.querySelector('span').textContent = isOpen ? '×' : '☰';
+  navigationLinks.classList.toggle('nav__links--open', isOpen);
+}
+
+menuToggle.addEventListener('click', () => {
+  const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+  setMenuOpen(!isExpanded);
+});
+
+navigationLinks.querySelectorAll('a').forEach((link) => {
+  link.addEventListener('click', () => {
+    setMenuOpen(false);
+  });
+});
 
 buttonAddCard.addEventListener('click', () => {
   const isClosed = iaDisplay.classList.toggle('displayOff');
